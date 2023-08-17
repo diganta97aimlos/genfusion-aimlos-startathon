@@ -1,0 +1,24 @@
+{
+    "workers_info": [
+
+        {
+            "dataset": "covid_radiography",
+            "data_dir": "../workers",
+            "test_batch_size": 8,
+            "MAX_GRAD_NORM": 0.8,
+            "EPSILON": 30.0,
+            "DELTA": 1e-3,
+            "MAX_PHYSICAL_BATCH_SIZE": 16
+        },
+
+        {
+            "dataset": "cancer",
+            "data_dir": "",
+            "test_batch_size": 8,
+            "MAX_GRAD_NORM": 0.5,
+            "EPSILON": 50.0,
+            "DELTA": 1e-5,
+            "MAX_PHYSICAL_BATCH_SIZE": 8
+        }
+    ]
+}

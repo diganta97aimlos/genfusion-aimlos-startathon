@@ -1,0 +1,75 @@
+[2023-07-29T23:59:30.506+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trainer.test manual__2023-07-29T23:52:39+00:00 [queued]>
+[2023-07-29T23:59:30.512+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trainer.test manual__2023-07-29T23:52:39+00:00 [queued]>
+[2023-07-29T23:59:30.512+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-29T23:59:30.520+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): test> on 2023-07-29 23:52:39+00:00
+[2023-07-29T23:59:30.533+0000] {standard_task_runner.py:57} INFO - Started process 667872 to run task
+[2023-07-29T23:59:30.535+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'trainer', 'test', 'manual__2023-07-29T23:52:39+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/train_dag.py', '--cfg-path', '/tmp/tmpn04iu_02']
+[2023-07-29T23:59:30.535+0000] {standard_task_runner.py:85} INFO - Job 75: Subtask test
+[2023-07-29T23:59:30.576+0000] {task_command.py:410} INFO - Running <TaskInstance: trainer.test manual__2023-07-29T23:52:39+00:00 [running]> on host ip-172-31-37-30.ap-south-1.compute.internal
+[2023-07-29T23:59:30.638+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trainer' AIRFLOW_CTX_TASK_ID='test' AIRFLOW_CTX_EXECUTION_DATE='2023-07-29T23:52:39+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-29T23:52:39+00:00'
+[2023-07-29T23:59:30.645+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/torchvision/models/_utils.py:208 UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+[2023-07-29T23:59:30.646+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/torchvision/models/_utils.py:223 UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+[2023-07-29T23:59:30.863+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.865+0000] {module_validator.py:120} INFO - Replaced sub_module bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.865+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.866+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.0.bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.867+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.868+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.0.bn2 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.868+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.869+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.1.bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.870+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.870+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.1.bn2 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.871+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.872+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.bn1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.872+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.873+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.bn2 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.874+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.875+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.downsample.1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.875+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.876+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.1.bn1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.876+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.877+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.1.bn2 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.878+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.878+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.879+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.880+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.880+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.881+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.downsample.1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.882+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.882+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.1.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.883+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.884+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.1.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.884+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.885+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.bn1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.886+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.886+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.bn2 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.887+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.888+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.downsample.1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.888+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.889+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.1.bn1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.890+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:59:30.890+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.1.bn2 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:59:30.892+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/privacy_engine.py:142 UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+[2023-07-29T23:59:30.893+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/airflow/dags/train_dag.py", line 93, in test_module
+    testObj.testClientModels()
+  File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/fedgen/test.py", line 41, in testClientModels
+    clientModel = self.loadModels(trainDataLoader=trainDataLoader, weightsPath=f'/home/ubuntu/GenAI-Rush/models/encrypted_{worker}.pth')
+  File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/fedgen/test.py", line 32, in loadModels
+    encryptedModel, _, _, _ = modelBuilder.privatization(MAX_GRAD_NORM=self.MAX_GRAD_NORM, EPSILON=self.EPSILON, DELTA=self.DELTA, EPOCHS=self.EPOCHS)
+  File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/fedgen/utils.py", line 26, in privatization
+    self.model, self.optimizer, self.train_loader = privacy_engine.make_private_with_epsilon(
+  File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/privacy_engine.py", line 517, in make_private_with_epsilon
+    noise_multiplier=get_noise_multiplier(
+  File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2023-07-29T23:59:30.906+0000] {taskinstance.py:1345} INFO - Marking task as FAILED. dag_id=trainer, task_id=test, execution_date=20230729T235239, start_date=20230729T235930, end_date=20230729T235930
+[2023-07-29T23:59:30.919+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 75 for task test (get_noise_multiplier takes as input EITHER a number of steps or a number of epochs; 667872)
+[2023-07-29T23:59:30.987+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-07-29T23:59:31.007+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,478 @@
+[2023-07-29T23:53:11.138+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trainer.train_worker2 manual__2023-07-29T23:52:39+00:00 [queued]>
+[2023-07-29T23:53:11.145+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trainer.train_worker2 manual__2023-07-29T23:52:39+00:00 [queued]>
+[2023-07-29T23:53:11.145+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-29T23:53:11.155+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): train_worker2> on 2023-07-29 23:52:39+00:00
+[2023-07-29T23:53:11.167+0000] {standard_task_runner.py:57} INFO - Started process 658408 to run task
+[2023-07-29T23:53:11.169+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'trainer', 'train_worker2', 'manual__2023-07-29T23:52:39+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/train_dag.py', '--cfg-path', '/tmp/tmpedgcftmq']
+[2023-07-29T23:53:11.170+0000] {standard_task_runner.py:85} INFO - Job 73: Subtask train_worker2
+[2023-07-29T23:53:11.214+0000] {task_command.py:410} INFO - Running <TaskInstance: trainer.train_worker2 manual__2023-07-29T23:52:39+00:00 [running]> on host ip-172-31-37-30.ap-south-1.compute.internal
+[2023-07-29T23:53:11.292+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trainer' AIRFLOW_CTX_TASK_ID='train_worker2' AIRFLOW_CTX_EXECUTION_DATE='2023-07-29T23:52:39+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-29T23:52:39+00:00'
+[2023-07-29T23:53:11.320+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/torchvision/models/_utils.py:208 UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+[2023-07-29T23:53:11.320+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/torchvision/models/_utils.py:223 UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+[2023-07-29T23:53:12.052+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.052+0000] {module_validator.py:120} INFO - Replaced sub_module bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.053+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.053+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.0.bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.053+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.053+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.0.bn2 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.053+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.054+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.0.bn3 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.054+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.054+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.0.downsample.1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.054+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.054+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.1.bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.054+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.055+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.1.bn2 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.055+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.055+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.1.bn3 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.055+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.055+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.2.bn1 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.056+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.056+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.2.bn2 : BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 64, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.056+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.056+0000] {module_validator.py:120} INFO - Replaced sub_module layer1.2.bn3 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.056+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.057+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.bn1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.057+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.057+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.bn2 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.057+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.057+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.bn3 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.057+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.058+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.0.downsample.1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.058+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.058+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.1.bn1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.058+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.058+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.1.bn2 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.059+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.059+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.1.bn3 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.059+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.059+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.2.bn1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.059+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.059+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.2.bn2 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.060+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.060+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.2.bn3 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.060+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.060+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.3.bn1 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.060+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.061+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.3.bn2 : BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 128, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.061+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.061+0000] {module_validator.py:120} INFO - Replaced sub_module layer2.3.bn3 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.061+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.061+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.061+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.062+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.062+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.062+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.062+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.062+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.0.downsample.1 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.063+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.063+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.1.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.063+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.063+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.1.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.063+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.064+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.1.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.064+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.064+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.2.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.064+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.064+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.2.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.064+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.065+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.2.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.065+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.065+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.3.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.065+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.065+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.3.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.065+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.066+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.3.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.066+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.066+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.4.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.066+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.066+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.4.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.067+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.067+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.4.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.067+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.067+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.5.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.067+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.067+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.5.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.068+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.068+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.5.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.068+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.068+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.6.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.068+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.069+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.6.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.069+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.069+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.6.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.069+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.069+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.7.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.069+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.070+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.7.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.070+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.070+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.7.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.070+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.070+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.8.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.071+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.071+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.8.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.071+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.071+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.8.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.071+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.071+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.9.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.072+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.072+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.9.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.072+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.072+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.9.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.072+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.073+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.10.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.073+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.073+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.10.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.073+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.073+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.10.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.073+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.074+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.11.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.074+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.074+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.11.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.074+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.074+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.11.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.074+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.075+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.12.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.075+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.075+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.12.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.075+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.075+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.12.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.076+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.076+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.13.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.076+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.076+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.13.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.076+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.077+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.13.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.077+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.077+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.14.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.077+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.077+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.14.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.077+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.078+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.14.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.078+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.078+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.15.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.078+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.078+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.15.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.078+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.079+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.15.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.079+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.079+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.16.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.079+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.079+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.16.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.080+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.080+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.16.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.080+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.080+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.17.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.080+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.081+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.17.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.081+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.081+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.17.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.081+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.081+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.18.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.081+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.082+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.18.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.082+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.082+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.18.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.082+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.082+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.19.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.082+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.083+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.19.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.083+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.083+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.19.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.083+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.083+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.20.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.084+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.084+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.20.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.084+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.084+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.20.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.084+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.085+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.21.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.085+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.085+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.21.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.085+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.085+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.21.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.085+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.086+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.22.bn1 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.086+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.086+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.22.bn2 : BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 256, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.086+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.086+0000] {module_validator.py:120} INFO - Replaced sub_module layer3.22.bn3 : BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 1024, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.087+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.087+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.bn1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.087+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.087+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.bn2 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.087+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.088+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.bn3 : BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 2048, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.088+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.088+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.0.downsample.1 : BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 2048, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.088+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.088+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.1.bn1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.088+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.088+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.1.bn2 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.089+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.089+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.1.bn3 : BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 2048, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.089+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.089+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.2.bn1 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.089+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.090+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.2.bn2 : BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 512, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.090+0000] {batch_norm.py:61} INFO - The default batch_norm fixer replaces BatchNorm with GroupNorm.To overwrite the default to InstanceNorm, call fix() with replace_bn_with_in=True.
+[2023-07-29T23:53:12.090+0000] {module_validator.py:120} INFO - Replaced sub_module layer4.2.bn3 : BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) with GroupNorm(32, 2048, eps=1e-05, affine=True)
+[2023-07-29T23:53:12.092+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/privacy_engine.py:142 UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+[2023-07-29T23:53:12.130+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/accountants/analysis/rdp.py:332 UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+[2023-07-29T23:53:12.160+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/accountants/analysis/prv/prvs.py:50 RuntimeWarning: invalid value encountered in log
+[2023-07-29T23:53:13.654+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/opacus/accountants/analysis/rdp.py:332 UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+[2023-07-29T23:53:22.341+0000] {logging_mixin.py:150} INFO - EPOCH 1:
+[2023-07-29T23:53:25.685+0000] {logging_mixin.py:150} WARNING - /home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/torch/nn/modules/module.py:1344 UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+[2023-07-29T23:56:03.603+0000] {trainer.py:102} INFO - Training Round complete, Calculating Epsilon & Delta...
+[2023-07-29T23:56:03.604+0000] {trainer.py:104} INFO - Starting Validation...
+[2023-07-29T23:56:12.798+0000] {logging_mixin.py:150} WARNING - --- Logging error ---
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING - Traceback (most recent call last):
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+    msg = self.format(record)
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+    return fmt.format(record)
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+    record.message = record.getMessage()
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+    msg = msg % self.args
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING - TypeError: not all arguments converted during string formatting
+[2023-07-29T23:56:12.799+0000] {logging_mixin.py:150} WARNING - Call stack:
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/bin/airflow", line 8, in <module>
+    sys.exit(main())
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/__main__.py", line 48, in main
+    args.func(args)
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 77, in scheduler
+    _run_scheduler_job(job_runner, skip_serve_logs=args.skip_serve_logs)
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 42, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2023-07-29T23:56:12.801+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 281, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 310, in execute_job
+    ret = execute_callable()
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 826, in _execute
+    self.job.executor.start()
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 367, in start
+    self.impl.start()
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 308, in start
+    worker.start()
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+[2023-07-29T23:56:12.802+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 74, in run
+    return super().run()
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 198, in do_work
+    self.execute_work(key=key, command=command)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 91, in execute_work
+    state = self._execute_work_in_fork(command)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 131, in _execute_work_in_fork
+    args.func(args)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-07-29T23:56:12.803+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 425, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 203, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 265, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 281, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 310, in execute_job
+    ret = execute_callable()
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/local_task_job_runner.py", line 159, in _execute
+    self.task_runner.start()
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 45, in start
+    self.process = self._start_by_fork()
+[2023-07-29T23:56:12.804+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 97, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 425, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 205, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 284, in _run_raw_task
+    return ti._run_raw_task(
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1407, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1558, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1628, in _execute_task
+    result = execute_callable(context=context)
+[2023-07-29T23:56:12.805+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/airflow/dags/train_dag.py", line 59, in training_module
+    trainer_obj.runTrainingSession()
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/fedgen/trainer.py", line 138, in runTrainingSession
+    logging.info(performance, '\n')
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 2138, in info
+    root.info(msg, *args, **kwargs)
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1477, in info
+    self._log(INFO, msg, args, **kwargs)
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+[2023-07-29T23:56:12.806+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+[2023-07-29T23:56:12.807+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/log/file_task_handler.py", line 211, in emit
+    self.handler.emit(record)
+[2023-07-29T23:56:12.807+0000] {logging_mixin.py:150} WARNING - Message: {'Epoch': 1, 'Loss': 1.9182, 'Val Loss': 2.7855, 'Train Acc': 0.4759, 'Val Acc': 0.4934, 'ε': 22.2273, 'δ': 0.001}
+Arguments: ('\n',)
+[2023-07-29T23:56:12.818+0000] {logging_mixin.py:150} INFO - EPOCH 2:
+[2023-07-29T23:58:32.487+0000] {trainer.py:102} INFO - Training Round complete, Calculating Epsilon & Delta...
+[2023-07-29T23:58:32.487+0000] {trainer.py:104} INFO - Starting Validation...
+[2023-07-29T23:58:41.403+0000] {logging_mixin.py:150} WARNING - --- Logging error ---
+[2023-07-29T23:58:41.403+0000] {logging_mixin.py:150} WARNING - Traceback (most recent call last):
+[2023-07-29T23:58:41.403+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+    msg = self.format(record)
+[2023-07-29T23:58:41.403+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+    return fmt.format(record)
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+    record.message = record.getMessage()
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+    msg = msg % self.args
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING - TypeError: not all arguments converted during string formatting
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING - Call stack:
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/bin/airflow", line 8, in <module>
+    sys.exit(main())
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/__main__.py", line 48, in main
+    args.func(args)
+[2023-07-29T23:58:41.404+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 77, in scheduler
+    _run_scheduler_job(job_runner, skip_serve_logs=args.skip_serve_logs)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 42, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 281, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 310, in execute_job
+    ret = execute_callable()
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 826, in _execute
+    self.job.executor.start()
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 367, in start
+    self.impl.start()
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 308, in start
+    worker.start()
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+[2023-07-29T23:58:41.405+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 74, in run
+    return super().run()
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 198, in do_work
+    self.execute_work(key=key, command=command)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 91, in execute_work
+    state = self._execute_work_in_fork(command)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/executors/local_executor.py", line 131, in _execute_work_in_fork
+    args.func(args)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 425, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 203, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 265, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2023-07-29T23:58:41.406+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 281, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/job.py", line 310, in execute_job
+    ret = execute_callable()
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/jobs/local_task_job_runner.py", line 159, in _execute
+    self.task_runner.start()
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 45, in start
+    self.process = self._start_by_fork()
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 97, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    return f(*args, **kwargs)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 425, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 205, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 284, in _run_raw_task
+    return ti._run_raw_task(
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1407, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+[2023-07-29T23:58:41.407+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1558, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1628, in _execute_task
+    result = execute_callable(context=context)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/airflow/dags/train_dag.py", line 59, in training_module
+    trainer_obj.runTrainingSession()
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/GenAI-Rush/GenAI-Rush-FedGen/fedgen/trainer.py", line 138, in runTrainingSession
+    logging.info(performance, '\n')
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 2138, in info
+    root.info(msg, *args, **kwargs)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1477, in info
+    self._log(INFO, msg, args, **kwargs)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING -   File "/home/ubuntu/theft-detection/env1/lib/python3.10/site-packages/airflow/utils/log/file_task_handler.py", line 211, in emit
+    self.handler.emit(record)
+[2023-07-29T23:58:41.408+0000] {logging_mixin.py:150} WARNING - Message: {'Epoch': 2, 'Loss': 2.9998, 'Val Loss': 3.011, 'Train Acc': 0.49, 'Val Acc': 0.4924, 'ε': 29.9945, 'δ': 0.001}
+Arguments: ('\n',)
+[2023-07-29T23:58:42.035+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-07-29T23:58:42.045+0000] {taskinstance.py:1345} INFO - Marking task as SUCCESS. dag_id=trainer, task_id=train_worker2, execution_date=20230729T235239, start_date=20230729T235311, end_date=20230729T235842
+[2023-07-29T23:58:42.331+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-07-29T23:58:42.351+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

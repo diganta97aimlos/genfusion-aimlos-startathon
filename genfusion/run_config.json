@@ -1,0 +1,1 @@
+{"run_id": 1, "mode": "train", "epochs": 2, "batch_size": 48, "selected_model": null, "client": "worker1", "prediction_mode": null}
